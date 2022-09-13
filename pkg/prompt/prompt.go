@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/6uhrmittag/boilr/pkg/util/tlog"
+	"github.com/Li-AnLin/boilr/pkg/util/tlog"
 )
 
 type templateFunc func() interface{}
@@ -42,19 +42,17 @@ func (p boolPrompt) PromptMessage(name string) string {
 	return fmt.Sprintf("Please choose a value for %q", name)
 }
 
-var (
-	booleanValues = map[string]bool{
-		"y":    true,
-		"yes":  true,
-		"yup":  true,
-		"true": true,
+var booleanValues = map[string]bool{
+	"y":    true,
+	"yes":  true,
+	"yup":  true,
+	"true": true,
 
-		"n":     false,
-		"no":    false,
-		"nope":  false,
-		"false": false,
-	}
-)
+	"n":     false,
+	"no":    false,
+	"nope":  false,
+	"false": false,
+}
 
 func (p boolPrompt) EvaluateChoice(c string) (interface{}, error) {
 	if val, ok := booleanValues[c]; ok {

@@ -9,11 +9,11 @@ import (
 	"regexp"
 	"text/template"
 
-	"github.com/6uhrmittag/boilr/pkg/boilr"
-	"github.com/6uhrmittag/boilr/pkg/prompt"
-	"github.com/6uhrmittag/boilr/pkg/util/osutil"
-	"github.com/6uhrmittag/boilr/pkg/util/stringutil"
-	"github.com/6uhrmittag/boilr/pkg/util/tlog"
+	"github.com/Li-AnLin/boilr/pkg/boilr"
+	"github.com/Li-AnLin/boilr/pkg/prompt"
+	"github.com/Li-AnLin/boilr/pkg/util/osutil"
+	"github.com/Li-AnLin/boilr/pkg/util/stringutil"
+	"github.com/Li-AnLin/boilr/pkg/util/tlog"
 )
 
 // Interface is contains the behavior of boilr templates.
@@ -111,12 +111,12 @@ func (t *dirTemplate) UseDefaultValues() {
 
 func (t *dirTemplate) BindPrompts() {
 	for s, ov := range t.Context {
-		var v = ov
+		v := ov
 		if m, ok := v.(map[string]interface{}); ok {
 			advancedMode := prompt.New(s, false)
 
 			for k, ov2 := range m {
-				var v2 = ov2
+				v2 := ov2
 				if t.ShouldUseDefaults {
 					t.FuncMap[k] = func() interface{} {
 						switch v2 := v2.(type) {
@@ -201,7 +201,7 @@ func (t *dirTemplate) Execute(dirPrefix string) error {
 		target := filepath.Join(dirPrefix, newName)
 
 		if info.IsDir() {
-			if err := os.Mkdir(target, 0755); err != nil {
+			if err := os.Mkdir(target, 0o755); err != nil {
 				if !os.IsExist(err) {
 					return err
 				}

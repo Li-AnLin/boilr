@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/6uhrmittag/boilr/pkg/cmd"
+	"github.com/Li-AnLin/boilr/pkg/cmd"
 )
 
 func TestUseExecutesProjectTemplate(t *testing.T) {
@@ -15,10 +15,10 @@ func TestUseExecutesProjectTemplate(t *testing.T) {
 	if err != nil {
 		t.Fatalf("ioutil.TempDir() got error -> %v", err)
 	} else {
-		//defer os.RemoveAll(tmpDirPath)
+		// defer os.RemoveAll(tmpDirPath)
 	}
 
-	if err := os.MkdirAll(filepath.Join(tmpDirPath, "input", "{{Name}}", "{{Date}}"), 0744); err != nil {
+	if err := os.MkdirAll(filepath.Join(tmpDirPath, "input", "{{Name}}", "{{Date}}"), 0o744); err != nil {
 		t.Fatalf("os.MkdirAll should have created template directories -> got error %v", err)
 	}
 

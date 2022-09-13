@@ -6,9 +6,9 @@ import (
 
 	cli "github.com/spf13/cobra"
 
-	"github.com/6uhrmittag/boilr/pkg/boilr"
-	"github.com/6uhrmittag/boilr/pkg/util/exit"
-	"github.com/6uhrmittag/boilr/pkg/util/validate"
+	"github.com/Li-AnLin/boilr/pkg/boilr"
+	"github.com/Li-AnLin/boilr/pkg/util/exit"
+	"github.com/Li-AnLin/boilr/pkg/util/validate"
 )
 
 func renameTemplate(oldPath, newPath string) error {
@@ -21,8 +21,8 @@ func renameTemplate(oldPath, newPath string) error {
 
 // Rename contains the cli-command for renaming templates in the template registry.
 var Rename = &cli.Command{
-	Use:    "rename <old-template-tag> <new-template-tag>",
-	Short:  "Rename a project template",
+	Use:   "rename <old-template-tag> <new-template-tag>",
+	Short: "Rename a project template",
 	Run: func(c *cli.Command, args []string) {
 		MustValidateArgs(args, []validate.Argument{
 			{"old-template-tag", validate.UnixPath},

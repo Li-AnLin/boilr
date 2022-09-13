@@ -8,12 +8,12 @@ import (
 
 	cli "github.com/spf13/cobra"
 
-	"github.com/6uhrmittag/boilr/pkg/boilr"
-	"github.com/6uhrmittag/boilr/pkg/host"
-	"github.com/6uhrmittag/boilr/pkg/util/exit"
-	"github.com/6uhrmittag/boilr/pkg/util/git"
-	"github.com/6uhrmittag/boilr/pkg/util/osutil"
-	"github.com/6uhrmittag/boilr/pkg/util/validate"
+	"github.com/Li-AnLin/boilr/pkg/boilr"
+	"github.com/Li-AnLin/boilr/pkg/host"
+	"github.com/Li-AnLin/boilr/pkg/util/exit"
+	"github.com/Li-AnLin/boilr/pkg/util/git"
+	"github.com/Li-AnLin/boilr/pkg/util/osutil"
+	"github.com/Li-AnLin/boilr/pkg/util/validate"
 )
 
 // Download contains the cli-command for downloading templates from github.
@@ -96,7 +96,6 @@ var Download = &cli.Command{
 			if !exists {
 				if err = osutil.CreateDirs(targetDir); err != nil {
 					exit.Error(fmt.Errorf("download: %s", err))
-
 				}
 			}
 			if err = osutil.CopyRecursively(templateTmpDir, targetDir); err != nil {

@@ -1,6 +1,6 @@
-module github.com/6uhrmittag/boilr
+module github.com/Li-AnLin/boilr
 
-go 1.15
+go 1.16
 
 require (
 	github.com/docker/go-units v0.4.0

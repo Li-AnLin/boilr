@@ -7,10 +7,10 @@ import (
 
 	cli "github.com/spf13/cobra"
 
-	"github.com/6uhrmittag/boilr/pkg/boilr"
-	"github.com/6uhrmittag/boilr/pkg/util/osutil"
-	"github.com/6uhrmittag/boilr/pkg/util/tlog"
-	"github.com/6uhrmittag/boilr/pkg/util/validate"
+	"github.com/Li-AnLin/boilr/pkg/boilr"
+	"github.com/Li-AnLin/boilr/pkg/util/osutil"
+	"github.com/Li-AnLin/boilr/pkg/util/tlog"
+	"github.com/Li-AnLin/boilr/pkg/util/validate"
 )
 
 // Delete contains the cli-command for deleting templates.

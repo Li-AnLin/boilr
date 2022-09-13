@@ -5,10 +5,10 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/Li-AnLin/boilr/pkg/boilr"
+	"github.com/Li-AnLin/boilr/pkg/util/exit"
+	"github.com/Li-AnLin/boilr/pkg/util/osutil"
 	cli "github.com/spf13/cobra"
-	"github.com/6uhrmittag/boilr/pkg/boilr"
-	"github.com/6uhrmittag/boilr/pkg/util/exit"
-	"github.com/6uhrmittag/boilr/pkg/util/osutil"
 )
 
 func configureBashCompletion() error {
@@ -29,7 +29,7 @@ func configureBashCompletion() error {
 
 	bashrcPath := filepath.Join(homeDir, ".bashrc")
 
-	f, err := os.OpenFile(bashrcPath, os.O_APPEND|os.O_WRONLY, 0600)
+	f, err := os.OpenFile(bashrcPath, os.O_APPEND|os.O_WRONLY, 0o600)
 	if err != nil {
 		return err
 	}
@@ -51,8 +51,8 @@ source %s
 
 // ConfigureBashCompletion generates bash auto-completion script and installs it.
 var ConfigureBashCompletion = &cli.Command{
-	Use:    "configure-bash-completion",
-	Short:  "Configure bash the auto-completion",
+	Use:   "configure-bash-completion",
+	Short: "Configure bash the auto-completion",
 	Run: func(c *cli.Command, _ []string) {
 		if err := configureBashCompletion(); err != nil {
 			exit.Fatal(fmt.Errorf("configure-bash-completion: %s", err))

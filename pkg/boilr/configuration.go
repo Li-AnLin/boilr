@@ -7,8 +7,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/6uhrmittag/boilr/pkg/util/exit"
-	"github.com/6uhrmittag/boilr/pkg/util/osutil"
+	"github.com/Li-AnLin/boilr/pkg/util/exit"
+	"github.com/Li-AnLin/boilr/pkg/util/osutil"
 )
 
 const (
@@ -90,7 +90,7 @@ func init() {
 
 	if !hasConfig {
 		// TODO report the absence of config.json
-		//tlog.Debug("Couldn't find %s user configuration", ConfigFileName)
+		// tlog.Debug("Couldn't find %s user configuration", ConfigFileName)
 		return
 	}
 

@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/6uhrmittag/boilr/pkg/template"
+	"github.com/Li-AnLin/boilr/pkg/template"
 )
 
 func TestMarshalsTime(t *testing.T) {

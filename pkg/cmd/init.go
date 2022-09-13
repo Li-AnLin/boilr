@@ -3,10 +3,10 @@ package cmd
 import (
 	"fmt"
 
+	"github.com/Li-AnLin/boilr/pkg/boilr"
+	"github.com/Li-AnLin/boilr/pkg/util/exit"
+	"github.com/Li-AnLin/boilr/pkg/util/osutil"
 	cli "github.com/spf13/cobra"
-	"github.com/6uhrmittag/boilr/pkg/boilr"
-	"github.com/6uhrmittag/boilr/pkg/util/exit"
-	"github.com/6uhrmittag/boilr/pkg/util/osutil"
 )
 
 // Init contains the cli-command for initializing the local template

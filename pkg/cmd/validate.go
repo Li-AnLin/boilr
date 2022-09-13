@@ -3,15 +3,13 @@ package cmd
 import (
 	"errors"
 
+	"github.com/Li-AnLin/boilr/pkg/util/exit"
+	"github.com/Li-AnLin/boilr/pkg/util/validate"
 	cli "github.com/spf13/cobra"
-	"github.com/6uhrmittag/boilr/pkg/util/exit"
-	"github.com/6uhrmittag/boilr/pkg/util/validate"
 )
 
-var (
-	// ErrTemplateInvalid indicates that the template is invalid.
-	ErrTemplateInvalid = errors.New("validate: given template is invalid")
-)
+// ErrTemplateInvalid indicates that the template is invalid.
+var ErrTemplateInvalid = errors.New("validate: given template is invalid")
 
 // Validate contains the cli-command for validating templates.
 var Validate = &cli.Command{

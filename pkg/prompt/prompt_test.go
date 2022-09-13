@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/6uhrmittag/boilr/pkg/prompt"
+	"github.com/Li-AnLin/boilr/pkg/prompt"
 )
 
 func TestNewStringPromptFunc(t *testing.T) {
