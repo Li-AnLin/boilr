@@ -40,10 +40,10 @@ const (
 	TemplateMetadataName = "__metadata.json"
 
 	// GithubOwner is the owner of the github repository
-	GithubOwner = "6uhrmittag"
+	GithubOwner = "Li-AnLin"
 
 	// GithubRepo is the name of the github repository
-	GithubRepo = "6uhrmittag"
+	GithubRepo = "Li-AnLin"
 )
 
 // Configuration contains the values for needed for boilr to operate.
